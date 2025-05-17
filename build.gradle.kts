@@ -23,3 +23,17 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
+//region Java 24 Preview Features
+tasks.withType<JavaCompile>().configureEach {
+    options.compilerArgs.add("--enable-preview")
+}
+
+tasks.withType<Test>().configureEach {
+    jvmArgs("--enable-preview")
+}
+
+tasks.withType<JavaExec>().configureEach {
+    jvmArgs("--enable-preview")
+}
+//endregion
