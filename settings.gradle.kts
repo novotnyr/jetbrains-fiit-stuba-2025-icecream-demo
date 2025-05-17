@@ -1,0 +1,1 @@
+rootProject.name = "jetbrains-fiit-stuba-2025-icecream-demo"
