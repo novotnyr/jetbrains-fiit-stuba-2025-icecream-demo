@@ -10,6 +10,8 @@ public class Gui extends JFrame {
 
     private final JLabel label = new JLabel(sadIcon);
 
+    private final OpenMeteoService openMeteoService = new OpenMeteoService();
+
     public Gui() {
         super("Čas na zmrzlinu?");
         setSize(500, 500);
@@ -18,5 +20,14 @@ public class Gui extends JFrame {
         add(label);
 
         setVisible(true);
+
+        refresh();
+    }
+
+    public void refresh() {
+        var weather = openMeteoService.getCurrent();
+        if (weather.current.temperature_2m > 15 && weather.current.wind_speed_10m < 10) {
+            label.setIcon(happyIcon);
+        }
     }
 }
