@@ -1,3 +1,7 @@
+import com.jetbrains.icecream.Gui;
+
+import javax.swing.SwingUtilities;
+
 void main() {
-    println("Možno je čas na zmrzlinu?");
+    SwingUtilities.invokeLater(() -> new Gui());
 }
