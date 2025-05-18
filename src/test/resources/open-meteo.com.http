@@ -1,0 +1,3 @@
+### Retrieve current temperature, precipitation and wind speed in Bratislava, SK
+GET https://api.open-meteo.com/v1/forecast?latitude=48.1482&longitude=17.1067&current=temperature_2m,precipitation,wind_speed_10m
+
